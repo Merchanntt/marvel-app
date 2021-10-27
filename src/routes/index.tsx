@@ -1,13 +1,13 @@
 import React from 'react';
-import {createNativeStackNavigator} from '@react-navigation/native-stack'
+import {createStackNavigator} from '@react-navigation/stack'
 
 import Dashboard from '../pages/dashboard';
 import HeroDetailsPage from '../pages/details';
 
-const App = createNativeStackNavigator();
+const App = createStackNavigator();
 
 const AppRoutes: React.FC = () => (
-  <App.Navigator>
+  <App.Navigator screenOptions={{headerShown: false, cardStyle: {backgroundColor: '#312e38'}}}>
     <App.Screen name="dashboard" component={Dashboard}/>
     <App.Screen name="heroDetailsPage" component={HeroDetailsPage}/>
   </App.Navigator>
